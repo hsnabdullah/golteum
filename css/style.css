@@ -1,0 +1,2262 @@
+
+@font-face {
+  font-family: "Grotesk-regular";
+  src: url("../fonts/NHaasGroteskTXPro-55Rg.ttf");
+}
+@font-face {
+  font-family: "Grotesk-medium";
+  src: url("../fonts/NHaasGroteskTXPro-65Md.ttf");
+}
+@font-face {
+  font-family: "Grotesk-bold";
+  src: url("../fonts/NHaasGroteskTXPro-75Bd.ttf");
+}
+* {
+  font-family: "Grotesk-regular";
+}
+.container {
+    max-width: 1280px;
+}
+*:focus {
+  outline: none !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+a, a:hover {  
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9;
+}
+.navbar-light {
+  position: relative;
+  padding-top: 30px;
+}
+.navbar-light .email{
+  position: absolute;
+  font-size: 12px;
+  color: #FEC844;
+  right: 15px;
+  top: 10px;
+}
+.navbar-light .email a{
+  color: #fff;
+}
+.navbar-light .navbar-nav {
+  align-items: center;
+}
+.navbar-light .navbar-nav .nav-link {
+    font-family: "Grotesk-medium";
+    color: rgba(255, 255, 255, 1);
+    font-weight: 400;
+    font-size: 13px;
+    position: relative;
+    text-transform: uppercase;
+    display: block;
+    cursor: pointer;
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+}
+
+.navbar-light .navbar-nav .nav-link:hover,
+.navbar-light .navbar-nav .nav-link:focus {
+  color: #FEC844;
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+.navbar-light .navbar-nav li.active a {
+  color: #FEC844 !important;
+}
+.navbar-light .navbar-nav li.active a:after {
+  width: 100%;
+}
+.navbar-light .navbar-nav li.signed {
+  margin-left: 50px;
+}
+.navbar-light .navbar-nav li.signed div{
+  display: flex;
+}
+.navbar-light .navbar-nav li.signed div .login{
+  width: 120px;
+  height: 48px;
+  display: block;
+  border: 2px solid #999;
+  color: #fff;
+  font-size: 18px;
+  text-align: center;
+  border-radius: 3px;
+  padding: 9px;
+}
+.navbar-light .navbar-nav li.signed div .login span{ 
+  width: 10px;
+  height: 14px;
+  background-image: url(../images/union-white.svg);
+  display: inline-block;
+  float: right;
+  background-size: cover;
+  position: relative;
+  top: 5px;
+}
+.navbar-light .navbar-nav li.signed div .login:hover{
+  text-decoration: none;
+  color: #0b0f17;
+  border-color: #fec844;
+  background: rgb(254,200,68);
+  background: linear-gradient(90deg, rgba(254,200,68,1) 0%, rgba(254,200,68,1) 35%, rgba(255,218,126,1) 65%, rgba(168,102,14,1) 100%);
+}
+.navbar-light .navbar-nav li.signed div .login:hover span{ 
+  background-image: url(../images/union.svg);
+}
+.navbar-light .navbar-nav li.signed div .signup{
+  width: 136px;
+  height: 48px;
+  display: block;
+  margin-left: 10px;
+  border: 2px solid #999;
+  color: #fff;
+  font-size: 18px;
+  text-align: center;
+  border-radius: 3px;
+  padding: 9px;
+}
+.navbar-light .navbar-nav li.signed div .signup span{ 
+  width: 10px;
+  height: 14px;
+  background-image: url(../images/union-white.svg);
+  display: inline-block;
+  float: right;
+  background-size: cover;
+  position: relative;
+  top: 5px;
+}
+.navbar-light .navbar-nav li.signed div .signup:hover{
+  text-decoration: none;
+  color: #0b0f17;
+  border-color: #fec844;
+  background: rgb(254,200,68);
+  background: linear-gradient(90deg, rgba(254,200,68,1) 0%, rgba(254,200,68,1) 35%, rgba(255,218,126,1) 65%, rgba(168,102,14,1) 100%);
+}
+.navbar-light .navbar-nav li.signed div .signup:hover span{ 
+  background-image: url(../images/union.svg);
+}
+
+.navbar-light .navbar-brand {
+  position: relative;
+  padding: 0;
+  padding-right: 11px;
+}
+.navbar-light .navbar-brand:after {
+  content: "";
+  width: 2pt;
+  height: 100%;
+  right: 0px;
+  top: 0px;
+  display: block;
+  position: absolute;
+  background-image: url(../images/logo-border.png);
+  background-size: 100% 100%;
+}
+
+
+@media (min-width:992px) {
+    .navbar-expand-lg .navbar-nav .nav-link {
+        padding-right: 0;
+        padding-left: 0;
+    }
+    .navbar-nav .nav-item:not(:last-child) {
+        margin-right: 15px
+    }
+    
+}
+
+
+  /* The slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 22px;
+    width: 22px;
+    left: 2px;
+    bottom: -3px;
+    border: 1px solid #0070dc;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+
+  .image img {
+    max-width: 100%;
+  }
+  section.banner {
+    padding-top: 15%;
+    padding-bottom: 74px;
+    position: relative;
+    background-image: url(../images/banner-bg.svg);
+    background-size: cover;
+    overflow: hidden;
+  }
+  section.banner .bannerslider  {
+    z-index: 9;
+  }
+
+  section.banner .bannerslider .bannerText h3{
+    font-family: "Grotesk-medium";
+    font-size: 48px;
+    color: #fff;
+    margin: 0;
+    line-height: 60px;
+    text-transform: uppercase;
+  }
+  section.banner .bannerslider .bannerText p{
+    font-size: 18px;
+    color: #fff;
+    margin: 0;
+    font-weight: 400;
+    margin-top: 10px;
+    max-width: 80%;
+  }
+  section.banner .bannerslider .bannerText .buyBtn a {
+    font-family: "Grotesk-medium";
+    display: inline-block;
+    font-size: 20px;
+    width: 225px;
+    padding: 10px 15px;
+    background-color: #FEC844;
+    border: 1px solid #FEC844;
+    margin-top: 20px;
+    color: #0b0f17;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+  section.banner .bannerslider .bannerText .buyBtn a:hover {
+    background-color: transparent;
+    color: #fff;
+    border: 1px solid #fff;
+  }
+  section.banner .bannerslider .bannerText .buyBtn a span{
+    width: 10px;
+    height: 14px;
+    background-image: url(../images/union.svg);
+    display: inline-block;
+    float: right;
+    background-size: cover;
+    position: relative;
+    top: 7px;
+  }
+  section.banner .bannerslider .bannerText .buyBtn a:hover span{
+    background-image: url(../images/union-white.svg);
+  }
+  section.banner .bannerslider .bannerText .tokenPrice {
+    display: inline-block;
+    font-family: "Grotesk-medium";
+    background-color: #fff;
+    font-size: 17px;
+    margin: 20px 0;
+  }
+  section.banner .bannerslider .bannerText .tokenPrice span {
+    font-family: "Grotesk-medium";
+    background-color: #FEC844;
+    padding: 6px 20px;
+    padding-right: 5px;
+    display: inline-block;
+  }
+  section.banner .bannerslider .bannerText .tokenPrice span.token {
+    background-color: #fff;
+    padding-right: 30px;
+  }
+
+  label.error {
+    font-size: 12px;
+    color: rgba(237,67,55,0.8);
+  }
+
+  #timer {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+  }
+  .number-list {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    font-size: 18px;
+    color: #FEC844;
+  }
+  .number-list .item {
+    font-family: "Grotesk-medium";
+    width: 100px;
+    height: 60px;
+    background: transparent;
+    margin-right: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    letter-spacing: 3px;
+    color: #fff;
+    background-color: #FEC844;
+  }
+  .number-list .item:first-child {
+    background: rgb(255,163,93);
+    background: linear-gradient(0deg, rgba(255,87,0,1) 30%, rgba(255,163,93,1) 100%);
+    
+  }
+  .unit-list {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .unit-list .item {
+    position: relative;
+    width: 100px;
+    margin-right: 15px;
+    line-height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    color: #fff;
+    background-color: #FEC844;
+    text-transform: capitalize;
+    flex-direction: column;
+    box-shadow: inset 0px 7px 11px #0b0f17;
+  }
+  .unit-list .item:first-child {
+    background: rgb(255,163,93);
+    background: linear-gradient(0deg, rgba(255,87,0,1) 30%, rgba(255,163,93,1) 100%);
+  }
+  /* .unit-list .item:after {
+    content: "";
+    width: 60px;
+    height: 3px;
+    background-color: #FEC844;
+    border-radius: 0 0 3px 3px;
+    display: block;
+    margin: 0px auto;
+
+  } */
+  
+  .timer-end {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: #0b0f17;
+    font-weight: 700;
+    font-family: sans-serif;
+  }
+  .timeCounter h4 {
+    font-family: "Grotesk-medium";
+    font-size: 20px;
+    margin-top: 100px;
+    color: #fff;
+  }
+
+  section.mission {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+  section.mission .image {
+    position: relative;
+  }
+  section.mission .image img{
+    max-width: 90%;
+  }
+  section.mission .image .border {
+    position: absolute;
+    width: 90%;
+    height: 100%;
+    right: 0%;
+    top: 8%;
+    border: 3px solid #FEC844 !important;
+    z-index: -1;
+  }
+  section.mission h4 {
+    font-size: 15px;
+    color: #FEC844;
+    text-transform: uppercase;
+  }
+  section.mission h2 {
+    font-family: "Grotesk-bold";
+    font-size: 46px;
+    color: #0b0f17;
+    margin-bottom: 20px;
+  }
+  section.mission p {
+    font-size: 15px;
+    color: #0b0f17;
+    margin-bottom: 40px;
+  }
+
+  section.tokens {
+    padding: 62px 0;
+    background-color: #f9f9f9;
+  }
+  section.tokens h2 {
+    font-family: "Grotesk-bold";
+    font-size: 48px;
+    color: #0b0f17;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    max-width: 60%;
+  }
+  section.tokens h2 span {
+    font-family: "Grotesk-bold";
+    color: #FEC844;
+  }
+  section.tokens .block{
+    background-color: #fff;
+    box-shadow: 0 2px 5px #ccc;
+    padding: 30px 45px;    
+    height: 100%;
+  }
+  section.tokens .block.dark{
+    padding: 30px 45px;
+    background-color: #0b0f17;
+  }
+  section.tokens .block.dark h3{
+    font-family: "Grotesk-bold";
+    font-size: 28px;
+    color: #fff;
+    margin: 20px 0;
+  }
+  section.tokens .block.dark p{
+    font-size: 14px;
+    color: #fff;
+  }
+  section.tokens .block h3{
+    font-family: "Grotesk-bold";
+    font-size: 22px;
+    color: #0b0f17;
+    margin: 20px 0;
+  }
+  section.tokens .block p{
+    font-size: 14px;
+    color: #0b0f17;
+  }
+  section.tokens .block a {
+    font-family: "Grotesk-medium";
+    display: inline-block;
+    font-size: 16px;
+    padding: 10px 15px;
+    background-color: transparent;
+    border: 1px solid #fff;
+    margin-top: 20px;
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+  section.tokens .block a:hover {
+    background-color: #fff;
+    color: #0b0f17;
+    border: 1px solid #fff;
+  }
+
+  section.impactStory {
+    padding: 120px 0;
+    background-image: url(../images/impact-bg.svg);
+    background-size: cover;
+  }
+  section.impactStory h3{
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #ff9200;
+    text-transform: uppercase;
+  }
+  section.impactStory h2{
+    font-family: "Grotesk-medium";
+    font-size: 44px;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #fff;
+    text-transform: uppercase;
+  }
+  section.impactStory p{
+    font-size: 16px;
+    line-height: 32px;
+    text-align: center;
+    margin-bottom: 0px;
+    color: #fff;
+    max-width: 620px;
+    margin: 0 auto;
+  }
+
+  section.problems {
+    padding: 60px 0;
+    background: linear-gradient(to bottom, 
+      #f9f9f9    70%, 
+      #fff  30%
+    );
+  }
+  section.problems h2 {
+    font-size: 38px;
+    color: #0b0f17;
+    text-align: center;
+    margin: 0px auto 50px auto;
+    text-transform: uppercase;
+  }
+  section.problems .block{
+    background-color: #fff;
+    box-shadow: 0 2px 5px #ccc;
+    padding: 30px 45px;    
+    height: 100%;
+  }
+  section.problems .block.dark{
+    padding: 30px 45px;
+    background-color: #0b0f17;
+  }
+  section.problems .block.dark h3{
+    font-family: "Grotesk-bold";
+    font-size: 28px;
+    color: #fff;
+    margin: 20px 0;
+  }
+  section.problems .block.dark p{
+    font-size: 14px;
+    color: #fff;
+  }
+  section.problems .block h3{
+    font-family: "Grotesk-bold";
+    font-size: 22px;
+    color: #0b0f17;
+    margin: 20px 0;
+  }
+  section.problems .block p{
+    font-size: 14px;
+    color: #0b0f17;
+  }
+  section.problems .block a {
+    font-family: "Grotesk-medium";
+    display: inline-block;
+    font-size: 16px;
+    padding: 10px 15px;
+    background-color: transparent;
+    border: 1px solid #fff;
+    margin-top: 20px;
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+  section.problems .block a:hover {
+    background-color: #fff;
+    color: #0b0f17;
+    border: 1px solid #fff;
+  }
+
+  section.partners {
+    padding-bottom: 80px;
+    padding-top: 60px;
+  }
+  section.partners h3 {
+    font-size: 15px;
+    color: #ff9200;
+    text-transform: uppercase;
+  }
+  section.partners h2 {
+    font-family: "Grotesk-bold";
+    font-size: 46px;
+    color: #0b0f17;
+    margin-bottom: 20px;
+  }
+  section.partners p {
+    font-family: "Grotesk-medium";
+    font-size: 16px;
+    line-height: 26px;
+    color: #0b0f17;
+    margin-bottom: 40px;
+  }
+  section.partners .partnerSlider {
+    padding: 15px 0;
+  }
+  section.partners .partnerSlider .image{
+    margin: 0 5px;
+    height: 66px;
+    background-color: #0b0f17;
+  }
+  section.partners .partnerSlider .image img{
+    max-width: 100%;
+    height: 100%;
+    margin: 0px auto;
+  }
+
+  section.platform {
+    padding: 48px 0 175px 0;
+    background-color: #0b0f17;
+  }
+  section.platform h3 {
+    font-size: 20px;
+    color: #fec844;
+    text-transform: uppercase;
+  }
+  section.platform h2 {
+    font-family: "Grotesk-bold";
+    font-size: 46px;
+    color: #fff;
+    margin-bottom: 20px;
+  }
+  section.platform p {
+    font-size: 16px;
+    line-height: 26px;
+    color: #fff;
+  }
+  section.platformBlocks {
+    padding-bottom: 120px;
+    margin-top: -150px;
+  }
+  section.platformBlocks .block {
+      box-shadow: 0 2px 5px #ccc;
+      padding: 30px 20px;
+      height: 100%;
+      background-color: #fff;
+  }
+  section.platformBlocks .block h4 {
+    font-family: "Grotesk-bold";
+    font-size: 22px;
+    color: #0b0f17;
+    margin: 20px 0;
+  }
+  section.platformBlocks .block p {
+    font-size: 14px;
+    color: #0b0f17;
+  }
+
+  section.invest {
+    padding: 48px 0 150px 0;
+    background-color: #0b0f17;
+  }
+  section.invest h3 {
+    font-size: 20px;
+    color: #fec844;
+    text-transform: uppercase;
+  }
+  section.invest h2 {
+    font-family: "Grotesk-bold";
+    font-size: 46px;
+    color: #fff;
+    margin-bottom: 20px;
+  }
+  section.invest p {
+    font-size: 16px;
+    line-height: 26px;
+    color: #fff;
+  }
+  section.invest .image {
+    position: relative;
+  }
+  section.invest .image .laptop {
+    width: 95%;
+    position: relative;
+    z-index: 1;
+  }
+  section.invest .image .goldBar {
+    z-index: 0;
+    position: absolute;
+    right: 0;
+    top: 10%;
+    width: 27%;
+  }
+
+  section.investBlocks {
+    padding-bottom: 50px;
+    margin-top: -130px;
+  }
+  section.investBlocks .col {
+    margin-bottom: 20px;
+  }
+  section.investBlocks .block {
+      box-shadow: 0 2px 5px #ccc;
+      padding: 30px 25px;
+      height: 100%;
+      background-color: #fec844;
+      border-radius: 30px;
+  }
+  section.investBlocks .block h4 {
+    font-family: "Grotesk-bold";
+    font-size: 22px;
+    color: #0b0f17;
+    margin: 20px 0;
+  }
+  section.investBlocks .block p {
+    font-size: 14px;
+    color: #0b0f17;
+  }
+  section.investBlocks .text {
+    padding: 0 50px;
+    padding-top: 50px;
+  }
+  section.investBlocks .text h2 {
+    font-family: "Grotesk-bold";
+    font-size: 40px;
+    color: #0b0f17;
+    margin-bottom: 20px;
+  }
+  section.investBlocks .text h3 {
+    font-size: 18px;
+    line-height: 34px;
+    color: #0b0f17;
+    font-weight: normal;
+    max-width: 666px;
+  }
+
+
+  section.features {
+    background-color: #FEC844;
+  }
+  section.features .block{
+    padding: 15px 40px;
+    height: 100%;
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+  }
+  section.features .block:hover{
+    background-color: #0b0f17;
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+  }
+  section.features .block .icon{
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  section.features .block:hover .icon{
+    margin-top: 0;
+  }
+  section.features .block .icon1{ 
+    width: 90px;
+    height: 74px;
+    background-image: url(../images/feature-1.svg);
+  }
+  section.features .block .icon2{ 
+    width: 58px;
+    height: 74px;
+    background-image: url(../images/feature-2.svg);
+  }
+  section.features .block .icon3{ 
+    width: 71px;
+    height: 74px;
+    background-image: url(../images/feature-3.svg);
+  }
+  section.features .block .icon4{ 
+    width: 73px;
+    height: 73px;
+    background-image: url(../images/feature-4.svg);
+  }
+  section.features .block:hover .icon1{
+    background-image: url(../images/feature-1-hover.svg);
+  }
+  section.features .block:hover .icon2{
+    background-image: url(../images/feature-2-hover.svg);
+  }
+  section.features .block:hover .icon3{
+    background-image: url(../images/feature-3-hover.svg);
+  }
+  section.features .block:hover .icon4{
+    background-image: url(../images/feature-4-hover.svg);
+  }
+  section.features .block h3 {
+    font-size: 23px;
+    color: #0b0f17;
+    margin-bottom: 10px;
+  }
+  section.features .block p {
+    font-size: 14px;
+    color: #0b0f17;
+  }
+  section.features .block:hover h3 {
+    font-family: "Grotesk-bold";
+    font-size: 32px;
+    color: #fff;
+  }
+  section.features .block:hover p {
+    color: #fff;
+  }
+  section.features .block a {
+    font-family: "Grotesk-bold";
+    font-size: 18px;
+    line-height: 28px;
+    color: #0b0f17;
+    background-color: #FEC844;
+    display: block;
+    padding: 10px 15px;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+    opacity: 0;
+    visibility: hidden;
+  }
+  section.features .block:hover a {
+    opacity: 1;
+    visibility: visible;
+  }
+  section.features .block a span{
+    width: 10px;
+    height: 14px;
+    background-image: url(../images/union.svg);
+    display: inline-block;
+    float: right;
+    background-size: cover;
+    position: relative;
+    top: 7px;
+  }
+
+  section.tokenomics {
+    padding: 66px 0;
+    background-color: #f9f9f9;
+  }
+  section.tokenomics h2{
+    font-family: "Grotesk-bold";
+    font-size: 48px;
+    color: #0b0f17;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  section.tokenomics p{
+    font-size: 16px;
+    color: #0b0f17;
+    text-align: center;
+    width: 500px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+  }
+  section.tokenomics ul{
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+  }
+  section.tokenomics ul li{
+    list-style: none;
+    padding: 0 8px;
+  }
+  section.tokenomics .toke-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0px auto;
+    margin-top: 50px;
+    width: 80%;
+
+  }
+  section.tokenomics .toke-list .list-item {
+    width: 33.33%;
+    font-size: 17px;
+    color: #0B0F17;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  section.tokenomics .toke-list .list-item span{
+    font-family: "Grotesk-medium";
+  }
+  section.tokenomics .toke-list .list-item img {
+    margin-right: 15px;
+  }
+
+  section.tokenomics .image {
+    position: relative;
+    width: 88%;
+    margin: 0 auto;
+  }
+  section.tokenomics .image h3 {
+    font-family: "Grotesk-bold";
+    font-size: 30px;
+    color: #0b0f17;
+    text-align: center;
+    position: relative;
+    top: 60px;
+  }
+  section.tokenomics .image .mobile {
+    display: none;
+  }
+  section.tokenomics .chart-image {
+    position: relative;
+    padding-top: 30px;
+  }
+  section.tokenomics .chart-image span {
+    position: absolute;
+    color: #0b0f17;
+  }
+  section.tokenomics .chart-image span.percent1 {
+    font-family: "Grotesk-medium";
+    font-size: 15px;
+    left: 35%;
+    top: 8px;
+  }
+  section.tokenomics .chart-image span.percent2 {
+    font-family: "Grotesk-medium";
+    font-size: 15px;
+    left: 47%;
+    top: 4px;
+  }
+  section.tokenomics .chart-image span.percent3 {
+    font-family: "Grotesk-medium";
+    font-size: 24px;
+    color: #fff;
+    left: 15%;
+    top: 20%;
+  }
+  section.tokenomics .chart-image span.percent4 {
+    font-family: "Grotesk-medium";
+    font-size: 24px;
+    left: 65%;
+    top: 30%;
+  }
+  section.tokenomics .chart-image span.percent5 {
+    font-family: "Grotesk-medium";
+    font-size: 24px;
+    left: 8%;
+    top: 43%;
+  }
+  section.tokenomics .chart-image span.percent6 {
+    font-family: "Grotesk-medium";
+    font-size: 20px;
+    left: 56%;
+    top: 64%;
+  }
+  section.tokenomics .chart-image span.percent7 {
+    font-family: "Grotesk-medium";
+    font-size: 20px;
+    color: #fff;
+    left: 25%;
+    top: 60%;
+  }
+
+  section.tokenomics .chart-labels {
+    margin-top: 30px;
+  }
+  
+  section.tokenomics .chart-labels .label {
+    font-family: "Grotesk-medium";
+    font-size: 20px;
+    color: #0b0f17;
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 20px;
+    line-height: 20px;
+  }
+  section.tokenomics .chart-labels .label:before {
+    content: "";
+    width: 16px;
+    height: 23px;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  section.tokenomics .chart-labels .label1:before {
+    background-color: #7B7B7B;
+  }
+  section.tokenomics .chart-labels .label2:before {
+    background-color: #9CCE83;
+  }
+  section.tokenomics .chart-labels .label3:before {
+    background-color: #0B0F17;
+  }
+  section.tokenomics .chart-labels .label4:before {
+    background-color: #FF9200;
+  }
+  section.tokenomics .chart-labels .label5:before {
+    background-color: #FEC844;
+  }
+  section.tokenomics .chart-labels .label6:before {
+    background-color: #CFDBD5;
+  }
+  section.tokenomics .chart-labels .label7:before {
+    background-color: #63898B;
+  }
+  section.tokenomics .buyBtn  {
+    text-align: center;
+    margin-top: 50px;
+  }
+  section.tokenomics .buyBtn a {
+    font-family: "Grotesk-medium";
+    display: inline-block;
+    font-size: 16px;
+    width: 250px;
+    padding: 14px 15px;
+    background-color: #0b0f17;
+    margin-top: 20px;
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+  section.tokenomics .buyBtn a span {
+    width: 10px;
+    height: 14px;
+    background-image: url(../images/union-white.svg);
+    display: inline-block;
+    float: right;
+    background-size: cover;
+    position: relative;
+    top: 4px;
+  }
+  section.tokenomics .buyBtn a:hover {
+    background-color: #FEC844;
+  }
+
+  section.distribution {
+    padding-top: 35px;
+  }
+  section.distribution .distributionInner {
+    padding: 0px 0 60px 0;
+    border-bottom: 1px solid #d8d8d8;
+  }
+  section.distribution h2 {
+    font-family: "Grotesk-bold";
+    font-size: 40px;
+    color:#3C5152;
+    margin-bottom: 30px;
+    max-width: 520px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  section.distribution h2 span {
+    font-family: "Grotesk-bold";
+    color: #FEC844;
+  }
+  section.distribution .distributionInner{
+    position: relative;
+    display: flex;
+    padding: 75px 10%;
+  }
+  section.distribution .distributionInner .detailBlock {
+    position: relative;
+    width: 40%;
+    margin-right: 10px;
+  }
+  section.distribution .distributionInner .detailBlock .currencies {
+    padding: 5px;
+    border-radius: 30px;
+    background-color: #0b0f17;
+    left: 80%;
+    top: -30px;
+    width: 100%;
+    position: absolute;
+    z-index: 9;
+
+  }
+  section.distribution .distributionInner .detailBlock .currencies .head{
+    font-family: "Grotesk-bold";
+    font-size: 18px;
+    background-color: #FEC844;
+    padding: 10px 20px;
+    border-radius: 25px 25px 0 0;
+  }
+  section.distribution .distributionInner .detailBlock .currencies .icons{
+    display: flex;
+    padding: 10px 20px;
+    border-bottom: 1px solid #41444a ;
+  }
+  section.distribution .distributionInner .detailBlock .currencies .icons .iconInner{
+    font-size: 16px;
+    color: #fff;
+  }
+  section.distribution .distributionInner .detailBlock .currencies .icons .iconInner img {
+    margin: 0 5px;
+  }
+  section.distribution .distributionInner .detailBlock .tagline {
+    color: #fff;
+    font-size: 11px;
+    text-align: center;
+    padding: 5px 20px;
+    border-bottom: 1px solid #41444a;
+  }
+  section.distribution .distributionInner .detailBlock .taglist {
+    padding: 10px 30px;
+  }
+  section.distribution .distributionInner .detailBlock .taglist h6 {
+    position: relative;
+    font-family: "Grotesk-bold";
+    font-size: 18px;
+    color: #FEC844;
+    padding-left: 20px;
+  }
+  section.distribution .distributionInner .detailBlock .taglist h6:before {
+    content: "";
+    width: 7px;
+    height: 7px;
+    background-color: #FF9200;
+    position: absolute;
+    left: 0;
+    border-radius: 50%;
+    top: 5px;
+  }
+  section.distribution .distributionInner .detailBlock ul {
+    padding: 20px 0 10px 0;
+    border-radius: 30px;
+    background-color: #FEC844;
+  }
+  section.distribution .distributionInner .detailBlock ul li {
+    list-style: none;
+    border-bottom: 1px solid #dbad3c;
+    padding: 8px 20px;
+  }
+  section.distribution .distributionInner .detailBlock ul li:last-child {
+    border: none;
+  }
+  section.distribution .distributionInner .detailBlock ul li h5 {
+    font-family: "Grotesk-bold";
+    font-size: 11px;
+    line-height: 11px;
+    color: #A77F1E;
+  }
+  section.distribution .distributionInner .detailBlock ul li h3 {
+    font-family: "Grotesk-bold";
+    font-size: 18px;
+    line-height: 18px;
+    color: #0b0f17;
+  }
+  section.distribution .distributionInner .detailBlock ul li p {
+    font-family: "Grotesk-bold";
+    font-size: 11px;
+    line-height: 11px;
+    color: #0b0f17;
+    margin-bottom: 5px;
+  }
+  section.distribution .distributionInner .detailTable {
+    position: relative;
+    width: 60%;
+    padding: 85px 10px;
+    box-shadow: 0 0 10px #ccc;
+    margin-top: 125px;
+    background-color: #0b0f17;
+
+  }
+  section.distribution .distributionInner .detailTable table {
+    width: 100%;
+    background-color: #0b0f17;
+  }
+  section.distribution .distributionInner .detailTable tr th{
+    font-family: "Grotesk-medium";
+    font-size: 12px;
+    color: #fff;
+    padding: 15px;
+    border-bottom: 1px solid #fff;
+  }
+  section.distribution .distributionInner .detailTable tr td{
+    font-family: "Grotesk-medium";
+    font-size: 12px;
+    color: #fff;
+    padding: 15px;
+    border-bottom: 1px dashed #fff;
+  }
+  section.distribution .distributionInner .presaleBtn {
+    position: absolute;
+    bottom: -25px;
+    left: 25px;
+  }
+  section.distribution .distributionInner .presaleBtn a {
+    position: relative;
+    width: 225px;
+    height: 55px;
+    line-height: 55px;
+    font-size: 18px;
+    color: #0b0f17;
+    background-color: #fec844;
+    border: 1px solid #FEC844;
+    display: block;
+    padding: 0px 15px;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+  }
+  section.distribution .distributionInner .presaleBtn a:hover {
+    opacity: 0.7;
+  }
+  section.distribution .distributionInner .presaleBtn a span.border {
+    width: calc(225px - 40px);
+    height: calc(85px - 30px);
+    border: 1px solid #fff;
+    position: absolute;
+    left: 20px;
+    top: 15px;
+    background-image: none;
+  }
+  section.distribution .distributionInner .presaleBtn a span {
+    width: 10px;
+    height: 14px;
+    background-image: url(../images/union.svg);
+    display: inline-block;
+    float: right;
+    background-size: cover;
+    position: relative;
+    top: 20px;
+    right: 12px;
+  }
+
+  section.goldNft .goldNftInner{
+    padding: 50px 10%;
+    border-bottom: 1px solid #d8d8d8;
+  }
+  section.goldNft .goldNftInner h2{
+    font-family: "Grotesk-bold";
+    font-size: 40px;
+    color:#0b0f17;
+    margin-bottom: 30px;
+  }
+  section.goldNft .goldNftInner p{
+    font-size: 14px;
+    color:#0b0f17;
+    margin-bottom: 36px;
+  }
+  section.goldNft .goldNftInner a {
+    width: 225px;
+    font-size: 18px;
+    line-height: 28px;
+    color: #0b0f17;
+    background-color: #fff;
+    border: 1px solid #0b0f17;
+    display: inline-block;
+    padding: 10px 15px;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+  }
+  section.goldNft .goldNftInner a:hover {
+    background-color: #0b0f17;
+    color: #fff;
+  }
+  section.goldNft .goldNftInner a span {
+    width: 10px;
+    height: 14px;
+    background-image: url(../images/union.svg);
+    display: inline-block;
+    float: right;
+    background-size: cover;
+    position: relative;
+    top: 7px;
+  }
+  section.goldNft .goldNftInner a:hover span {
+    background-image: url(../images/union-white.svg);
+  }
+
+  section.goldIndustry {
+    margin-top: 60px;
+    padding: 30px 0 100px 0;
+    background: linear-gradient(to bottom, #f9f9f9 70%, #fff 30% );
+  }
+  section.goldIndustry h2 {
+    font-family: "Grotesk-bold";
+    font-size: 48px;
+    line-height: 40px;
+    color: #0b0f17;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  section.goldIndustry h2 span{
+    font-family: "Grotesk-bold";
+    color: #FEC844;
+  }
+  section.goldIndustry .goldIndustryInner {
+    padding: 0 10%;
+    margin-top: 100px;
+  }
+  section.goldIndustry .col-lg-4 .block {
+    background-color: #fff;
+    padding: 24px;
+    box-shadow: 0 0 5px #ccc;
+    border-radius: 8px;
+    height: 100%;
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+  }
+  section.goldIndustry .col-lg-4:hover .block {
+    margin-top: -60px;
+    background-color: #0b0f17;
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+
+  }
+  section.goldIndustry .col-lg-4 .block .icon {
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  section.goldIndustry .col-lg-4 .block .icon-1 {
+    width: 70px;
+    height: 70px;
+    background-image: url(../images/industry-1.svg);
+  }
+  section.goldIndustry .col-lg-4 .block .icon-2 {
+    width: 78px; 
+    height: 77px;
+    background-image: url(../images/industry-2.svg);
+  }
+  section.goldIndustry .col-lg-4 .block .icon-3 {
+    width: 68px;
+    height: 72px;
+    background-image: url(../images/industry-3.svg);
+  }
+  section.goldIndustry .col-lg-4:hover .block .icon-1 {
+    background-image: url(../images/industry-1-hover.svg);
+  }
+  section.goldIndustry .col-lg-4:hover .block .icon-2 {
+    background-image: url(../images/industry-2-hover.svg);
+  }
+  section.goldIndustry .col-lg-4:hover .block .icon-3 {
+    background-image: url(../images/industry-3-hover.svg);
+  }
+  section.goldIndustry .col-lg-4 .block h3{
+    font-family: "Grotesk-bold";
+    font-size: 30px;
+    color: #0b0f17;
+    margin-top: 20px;
+    margin-bottom: 5px;
+  }
+  section.goldIndustry .col-lg-4:hover .block h3{
+    color: #fff;
+  }
+  section.goldIndustry .col-lg-4 .block h4{
+    font-size: 20px;
+    color: #0b0f17;
+    margin-bottom: 15px;
+  }
+  section.goldIndustry .col-lg-4:hover .block h4{
+    color: #fff;
+  }
+  section.goldIndustry .col-lg-4 .block p{
+    font-size: 14px;
+    color: #707070;
+    margin-bottom: 0px;
+    min-height: 126px;
+  }
+  section.goldIndustry .col-lg-4:hover .block p{
+    color: #fff;
+  }
+  section.goldIndustry .col-lg-4 a {
+    width: 90%;
+    font-size: 18px;
+    line-height: 28px;
+    color: #0b0f17;
+    margin: 0 auto;
+    margin-top: 20px;
+    background-color: #fff;
+    border: 1px solid #0b0f17;
+    display: block;
+    padding: 10px 15px;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+    opacity: 0;
+    visibility: hidden;
+  }
+  section.goldIndustry .col-lg-4 a:hover {
+    background-color: #0b0f17;
+    color: #fff;
+  }
+  section.goldIndustry .col-lg-4:hover a {
+    opacity: 1;
+    visibility: visible;
+  }
+  section.goldIndustry .col-lg-4 a span {
+    width: 10px;
+    height: 14px;
+    background-image: url(../images/union.svg);
+    display: inline-block;
+    float: right;
+    background-size: cover;
+    position: relative;
+    top: 7px;
+  }
+  section.goldIndustry .col-lg-4 a:hover span {
+    background-image: url(../images/union-white.svg);
+  }
+
+  section.team {
+    padding: 50px 0 50px 0;
+    background: linear-gradient(0deg, #0b0f17 65%, #FEC844 35%);
+  }
+  section.team h2 {
+    font-family: "Grotesk-bold";
+    font-size: 48px;
+    color: #0b0f17;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  section.team h2 span {
+    font-family: "Grotesk-bold";
+    color: #fff;
+  }
+  section.team .image {
+    max-width: 70%;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+  section.team h3 {
+    font-family: "Grotesk-medium";
+    font-size: 21px;
+    text-align: center;
+    color: #fff;
+    margin-top: 30px;
+    margin-bottom: 10px;
+  }
+  section.team h4 {
+    font-family: "Grotesk-medium";
+    font-size: 20px;
+    text-align: center;
+    color: #fec844;
+    margin-bottom: 10px;
+  }
+  section.team p {
+    font-size: 16px;
+    text-align: center;
+    color: #fff;
+  }
+  section.team .buyBtn  {
+    text-align: center;
+    margin-top: 50px;
+  }
+  section.team .buyBtn a {
+    font-family: "Grotesk-medium";
+    display: inline-block;
+    font-size: 20px;
+    width: 225px;
+    padding: 10px 15px;
+    background-color: #FEC844;
+    border: 1px solid #FEC844;
+    margin-top: 20px;
+    color: #0b0f17;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+  section.team .buyBtn a span {
+    width: 10px;
+    height: 14px;
+    background-image: url(../images/union.svg);
+    display: inline-block;
+    float: right;
+    background-size: cover;
+    position: relative;
+    top: 7px;
+  }
+  section.team .buyBtn a:hover {
+    background-color: transparent;
+    color: #fff;
+    border: 1px solid #fff;
+  }
+  section.team .buyBtn a:hover span{
+    background-image: url(../images/union-white.svg);
+  }
+  section.team .social {
+    margin-top: 20px;
+  }
+  section.team .social a.fb {
+    width: 24px;
+    height: 24px;
+    background-image: url(../images/icons8-facebook.svg);
+    background-size: cover;
+    display: block;
+    margin: 0 10px;
+  }
+  section.team .social a.fb:hover {
+    background-image: url(../images/icons8-facebook-hover.svg);
+  }
+  section.team .social a.ln {
+    width: 24px;
+    height: 24px;
+    background-image: url(../images/icons8-linkedin.svg);
+    background-size: cover;
+    display: block;
+    margin: 0 10px;
+  }
+  section.team .social a.ln:hover {
+    background-image: url(../images/icons8-linkedin-hover.svg);
+  }
+  section.team .social a.tw {
+    width: 24px;
+    height: 24px;
+    background-image: url(../images/icons8-twitter.svg);
+    background-size: cover;
+    display: block;
+    margin: 0 10px;
+  }
+  section.team .social a.tw:hover {
+    background-image: url(../images/icons8-twitter-hover.svg);
+  }
+
+  section.roadMap {
+    position: relative;
+    padding-bottom: 10%;
+    background: linear-gradient(0deg, #201E40 30%, #0B0F17 100%);
+  }
+  section.roadMap .roadMapInner{
+    padding: 0 10%;
+    background-image: url(../images/Single-Vector.svg);
+    background-position: 43% 13%;
+    background-repeat: no-repeat;
+    background-size: 25%;
+
+  }
+  section.roadMap .roadMapInner .heading {
+    position: relative;
+    padding: 50px 0 23px 30px;
+    border-left: 1px solid #fff;
+    margin-bottom: 150px;
+  }
+  section.roadMap .roadMapInner .heading:before {
+    position: absolute;
+    content: "";
+    left: -2px;
+    top: 50px;
+    width: 4px;
+    height: 84px;
+    background-color: #FEC844;
+    display: block;
+  }
+  section.roadMap .roadMapInner .heading:after {
+    position: absolute;
+    content: "";
+    left: -4px;
+    top: 170px;
+    width: 8px;
+    height: 8px;
+    background-color: #FEC844;
+    display: block;
+    border-radius: 50%;
+  }
+  section.roadMap .roadMapInner .phases .phase3 {
+    margin-left: 40px;
+  }
+  section.roadMap .roadMapInner .heading h3 {
+    font-family: "Grotesk-bold";
+    font-size: 27px;
+    line-height: 27px;
+    color: #FEC844;
+    margin: 0;
+  }
+  section.roadMap .roadMapInner .heading h1 {
+    font-family: "Grotesk-bold";
+    font-size: 65px;
+    line-height: 65px;
+    color: #fff;
+    margin: 0;
+  }
+  section.roadMap .roadMapInner .phases {
+    margin-top: -100px;
+    padding-left: 30px;
+  }
+  section.roadMap .roadMapInner .phases .phase2,
+  section.roadMap .roadMapInner .phases .phase3,
+  section.roadMap .roadMapInner .phases .phase4 {
+    margin-top: -55px;
+  }
+  section.roadMap .roadMapInner .phases .phase4 {
+    margin-left: 20px;
+  }
+  section.roadMap .roadMapInner .phases h3 {
+    font-family: "Grotesk-bold";
+    font-size: 27px;
+    color: #4B5260;
+    margin-bottom: 20px;
+  }
+  section.roadMap .roadMapInner .phases p {
+    font-size: 12px;
+    color: #4B5260;
+    margin-bottom: 0px;
+    line-height: 22px;
+  }
+  section.roadMap .roadMapInner .phases .block.active h3{
+    color: #FEC844;
+  }
+  section.roadMap .roadMapInner .phases .block.active p{
+    color: #fff;
+  }
+  section.roadMap .roadMapInner .presaleBtn {
+    position: absolute;
+    text-align: center;
+    bottom: -20px;
+    width: 100%;
+    left: 0;
+  }
+  section.roadMap .roadMapInner .presaleBtn a{
+    font-family: "Grotesk-medium";
+    width: 225px;
+    font-size: 18px;
+    line-height: 28px;
+    color: #0b0f17;
+    background-color: #fec844;
+    border: 1px solid #fec844;
+    display: inline-block;
+    padding: 10px 15px;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+  }
+  section.roadMap .roadMapInner .presaleBtn a:hover{
+    background-color: #fff;
+    border-color: #0b0f17;
+  }
+  section.roadMap .roadMapInner .presaleBtn a span{
+    width: 10px;
+    height: 14px;
+    background-image: url(../images/union.svg);
+    display: inline-block;
+    float: right;
+    background-size: cover;
+    position: relative;
+    top: 7px;
+  }
+
+
+  section.faqs {
+    padding: 85px 0;
+  }
+  section.faqs h2{
+    font-family: "Grotesk-bold";
+    font-size: 64px;
+    color: #0b0f17;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  section.faqs .panel-group {
+    width: 80%;
+    margin: 0 auto;
+  }
+  section.faqs .panel-title {
+    margin: 0;
+  }
+  section.faqs .panel-title a {
+    font-size: 18px;
+    color: #0b0f17;
+  }
+  section.faqs .panel-default > .panel-heading + .panel-collapse > .panel-body {
+    padding: 20px;
+  }
+  section.faqs .panel-default > .panel-heading {
+    background-color: transparent;
+    border-bottom: 1px solid #dfdfdf;
+  }
+  .more-less.glyphicon-plus:after {
+    content: "+";
+    font-size: 25px;
+    color: #0b0f17;
+    font-style: normal;
+  }
+  .more-less.glyphicon-minus:after {
+    content: "-";
+    font-size: 25px;
+    color: #0b0f17;
+    font-style: normal;
+  }
+
+  section.footer {
+    padding-top: 40px;
+    padding-bottom: 50px;
+    background-color: #0b0f17;
+  }
+  section.footer ul.footermenu {
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+  }
+  section.footer ul.footermenu li {
+    list-style: none;
+    margin-left: 25px;
+  }
+  section.footer ul.footermenu li a {
+    font-family: "Grotesk-medium";
+    font-size: 14px;
+    color: #fff;
+  }
+  section.footer h2 {
+    font-family: "Grotesk-medium";
+    font-size: 24px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    color: #fff;
+  }
+  section.footer ul.social {
+    display: flex;
+    padding: 0;
+    margin: 0;
+  }
+  section.footer ul.social li {
+    list-style: none;
+    margin-right: 10px;
+  }
+  section.footer ul.social li a span {
+    width: 35px;
+    height: 35px;
+    display: block;
+    background-size: cover;
+  }
+  section.footer ul.social li a.social-1 span {
+    background-image: url(../images/Social-Icon-1.svg);
+  }
+  section.footer ul.social li a.social-2 span {
+    background-image: url(../images/Social-Icon-2.svg);
+  }
+  section.footer ul.social li a.social-3 span {
+    background-image: url(../images/Social-Icon-3.svg);
+  }
+  section.footer ul.social li a.social-4 span {
+    background-image: url(../images/Social-Icon-4.svg);
+  }
+  section.footer ul.social li a.social-1:hover span {
+    background-image: url(../images/Social-Icon-1-hover.svg);
+  }
+  section.footer ul.social li a.social-2:hover span {
+    background-image: url(../images/Social-Icon-2-hover.svg);
+  }
+  section.footer ul.social li a.social-3:hover span {
+    background-image: url(../images/Social-Icon-3-hover.svg);
+  }
+  section.footer ul.social li a.social-4:hover span {
+    background-image: url(../images/Social-Icon-4-hover.svg);
+  }
+
+  section.footer ul.social li a {
+    background-color: #273041;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    display: block;
+    padding: 3px 8px;
+    font-size: 19px;
+    color: #fff;
+  }
+  section.footer ul.social li a.social-1 {
+    padding: 0;
+  }
+  section.footer ul.social li a.social-3 {
+    padding: 3px 10px;
+  }
+  section.footer ul.social li a:hover {
+    color: #0B0F17;
+    background-color: #fec844;
+
+  }
+
+
+
+  section.footer .privacy {
+    height: 36px;
+    padding: 5px 10px;
+    border: 1px solid #52555a;
+    margin-left: 20px;
+  }
+  section.footer .privacy a {
+    font-size: 14px;
+    color: #fff;
+    padding: 0 15px;
+    border-right: 1px solid #fff;
+  }
+  section.footer .privacy a:last-child {
+    border-right: none;
+  }
+
+  footer {
+    padding: 15px 0;
+    background-color: #FEC844;
+  }
+  footer p {
+    font-family: "Grotesk-medium";
+    font-size: 14px;
+    line-height: 24px;
+    color: #0b0f17;
+    margin: 0;
+  }
+  
+  .panel-group .panel {
+    border-radius: 0;
+    box-shadow: none;
+    border-color: #EEEEEE;
+  }
+
+  .panel-default > .panel-heading {
+      padding: 0;
+      border-radius: 0;
+      color: #212121;
+      background-color: #FAFAFA;
+      border-color: #EEEEEE;
+  }
+
+  .panel-title {
+      font-size: 14px;
+  }
+
+  .panel-title > a {
+      display: block;
+      padding: 15px;
+      text-decoration: none;
+  }
+
+  .more-less {
+      float: right;
+      color: #212121;
+  }
+
+  .panel-default > .panel-heading + .panel-collapse > .panel-body {
+      border-top-color: #EEEEEE;
+  }
+
+  /* slider css starts here */
+  .slick-dots {
+    min-width: 100px;
+    margin: 0px auto;
+    border-radius: 30px;
+    position: absolute;
+    left: 43.5%;
+    bottom: -64px;
+  }
+  .slick-dots:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+  .slick-dots li {
+    list-style: none;
+    float: left;
+    margin-right: 36px;
+    line-height: 0;
+    height: 12px;
+  }
+  .slick-dots li button{
+    font-size: 0;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: #ccc;
+    border: none;
+    padding: 0;
+  }
+  .slick-dots li.slick-active button{
+    width: 16px;
+    height: 16px;
+    background-color: #5BC8AF;
+  }
+
+  .slick-prev {
+    position: absolute;
+    left: -30px;
+    top: 30%;
+    border: none;
+    font-size: 0;
+    background-color: transparent;
+    background-image: url(../images/arrowSlider_10.png);
+    width: 24px;
+    height: 40px;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  .slick-next {
+    position: absolute;
+    right: -30px;
+    top: 30%;
+    border: none;
+    font-size: 0;
+    background-color: transparent;
+    background-image: url(../images/arrowSlider_10.png);
+    width: 24px;
+    height: 40px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    transform: rotate(180deg);
+  }
+  .slick-prev:hover,
+  .slick-next:hover {
+    opacity: 0.8;
+  }
+  .navbar-light .navbar-toggler {
+    border: none;
+  }
+  .navbar-light .navbar-toggler-icon {
+    background-image: url(../images/hamburger.png);
+    height: 1em;
+  }
+
+  
+
+  @media only screen and (min-width: 992px) {
+    section.video .justify-content-center {
+      justify-content: flex-end !important;
+    }
+  }
+  @media only screen and (max-width: 1200px) {
+    .navbar-nav {
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+    .navbar-light .navbar-nav li.signed {
+      width: 100%;
+      text-align: right;
+      border: none;
+      margin-right: 20px;
+    }
+    .navbar-light .navbar-nav li.signed div {
+      justify-content: flex-end;
+    }
+    section.roadMap .roadMapInner {
+      background-size: 32%;
+    }
+    section.tokens h2 {
+      font-size: 36px;
+    }
+    section.tokenomics .toke-list { 
+      width: 100%;
+    }
+  }
+  @media only screen and (max-width: 991px) {
+    .navbar-nav {
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+    .navbar-light .navbar-nav li.signed {
+      width: 100%;
+      text-align: right;
+      border: none;
+      margin-left: 0;
+    }
+    section.banner .bannerslider .bannerText {
+      text-align: center;
+    }
+    section.banner .bannerslider .bannerText p {
+      margin: 0 auto;
+      max-width: 500px;
+      margin-top: 16px;
+      margin-bottom: 56px;
+    }
+    section.banner {
+      padding-bottom: 127px;
+      padding-top: 25%;
+    }
+    #timer {
+      align-items: center;
+    }
+    .number-list {
+      justify-content: center;
+    }
+    section.banner .bannerslider .image {
+      text-align: center;
+    }
+    section.mission .image {
+      text-align: center;
+    }
+    section.tokens .tokenInner,
+    section.platformBlocks, 
+    section.features,
+    section.team .teamInner  {
+      overflow: auto;
+    }
+    section.tokens .row,
+    section.platformBlocks .row,
+    section.features .row,
+    section.team .teamInner .row {
+      flex-wrap: nowrap;
+    }
+    section.tokens .row .block,
+    section.platformBlocks .row .block,
+    section.features .row .block,
+    section.team .teamInner .row .block {
+      min-width: 280px;
+    }
+    section.problems .col-lg-6 {
+      margin-bottom: 20px;
+    }
+    section.invest {
+      padding-bottom: 150px;
+      text-align: center;
+    }
+
+    section.goldNft .goldNftInner {
+      text-align: center;
+    }
+    section.goldNft .goldNftInner h2 {
+      margin-top: 30px;
+    }
+    section.invest h3 {
+      margin-bottom: 20px;
+    }
+    section.invest h2,
+    section.tokenomics h2 {
+      font-size: 28px;
+    }
+    section.roadMap .roadMapInner {
+      background-image: none;
+    }
+    section.roadMap .roadMapInner .phases h3 {
+      margin-top: 30px;
+    }
+    section.roadMap .roadMapInner .phases .phase3 {
+      margin-left: 0;
+    }
+    section.roadMap .roadMapInner .phases .phase2,
+    section.roadMap .roadMapInner .phases .phase4 {
+      margin-left: 40px;
+    }
+    section.roadMap .roadMapInner .phases .block {
+      position: relative;
+      margin-bottom: 30px;
+    }
+    section.roadMap .roadMapInner .phases .block:before {
+      content: "";
+      width: 18px;
+      height: 18px;  
+      background-color: #fff;
+      border: 4px solid #424C61;
+      border-radius: 50%;
+      position: absolute;
+      left: -35px;
+      top: 7px;
+      z-index: 1;
+    }
+    section.roadMap .roadMapInner .phases .block.phase2:before,
+    section.roadMap .roadMapInner .phases .block.phase4:before {
+      left: -75px;
+    }
+    section.roadMap .roadMapInner .phases .block.active:before{
+       border-color: #FEC844;
+       box-shadow: 0 0 10px #FEC844;
+    }
+    section.roadMap .roadMapInner .phases .block:after {
+      content: "";
+      left: -28px;
+      width: 3px;
+      height: 225px;
+      bottom: 96%;
+      background-color: #707070;
+      position: absolute;
+    }
+    section.roadMap .roadMapInner .phases .block.phase2:after,
+    section.roadMap .roadMapInner .phases .block.phase4:after {
+      left: -68px;
+    }
+    section.roadMap .roadMapInner .phases .block.active:after{
+      height: 60px; 
+      background-color: #FEC844;
+      z-index: 1;
+    }
+    
+    section.tokenomics .toke-list {
+      width: 100%;
+    }
+    footer .footerLeft,
+    footer .footerRight {
+      float: none;
+      text-align: center;
+    }
+    footer .footerRight ul{
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+      padding: 0;
+      margin-bottom: 0;
+    }
+    .slick-prev,
+    .slick-next {
+      display: none !important;
+    }
+    section.goldIndustry .goldIndustryInner .col-md-6 {
+      margin-bottom: 20px;
+    }
+  }
+  @media only screen and (max-width: 768px) {
+    .navbar-collapse {
+      background-color: rgba(11,15,23,0.9);
+      padding: 32px;
+    }
+    .navbar-light .navbar-nav li.signed div {
+      justify-content: center;
+    }
+    .navbar-light .navbar-brand {
+      padding-right: 10px;
+    }
+    section.partners .partnerSlider {
+      margin: 0;
+      margin-bottom: 20px;
+    }
+    section.partners .image {
+      text-align: center;
+    }
+    .slick-initialized .slick-slide {
+      position: relative;
+    }
+    .slick-dots {
+      left: 34.5%;
+    }
+    section.distribution .distributionInner {
+      padding-left: 0;
+      padding-right: 0;
+      padding-top: 0;
+      flex-wrap: wrap;
+    }
+    section.distribution .distributionInner .detailBlock{
+      width: 100%;
+    }
+    section.distribution .distributionInner .detailTable {
+      width: 90%;
+      margin: 0 auto; 
+      margin-top: -70px;
+      padding-top: 10px;
+    }
+    section.distribution .distributionInner .detailBlock {
+      margin: 0;
+    }
+    section.distribution .container {
+      padding: 0;
+    }
+    section.distribution .distributionInner .detailBlock ul {
+      border-radius: 0;
+      padding-bottom: 50px;
+      padding-top: 50px;
+    }
+    section.distribution .distributionInner .detailBlock .currencies {
+      width: 80%;
+      left: 10%;
+      top: 40px;
+      position: relative;
+    }
+    section.distribution .distributionInner .presaleBtn {
+      left: calc(50% - 125px);
+    }
+    section.tokenomics .image h3 {
+      top: 0;
+      margin-top: 30px;
+    }
+    section.goldIndustry .goldIndustryInner {
+      padding: 0;
+    }
+    section.impactStory {
+      padding: 40px 0;
+    }
+    section.impactStory p {
+      padding: 0 30px;
+    }
+    section.tokens h2 {
+      font-size: 32px;
+      max-width: 100%;
+    }
+    section.tokenomics .toke-list .list-item {
+      width: 50%;
+      text-align: left;
+    }
+    section.mission {
+      padding: 40px 0 80px 0;
+    }
+    
+    section.footer .logo {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    section.footer ul.footermenu {
+      justify-content: center;
+    }
+    section.footer h2 {
+      text-align: center;
+    }
+    section.footer .d-flex {
+      flex-wrap: wrap;
+    }
+    section.footer ul.social,
+    section.footer .privacy {
+      width: 100%;
+      justify-content: center;
+    }
+    section.footer .privacy {
+      margin-top: 20px;
+      text-align: center;
+    }
+  }
+  @media only screen and (max-width: 600px) {
+    section.banner .contactForm {
+      margin-bottom: 40px;
+    }
+    section.tokenomics p {
+      width: 100%;
+    }
+    section.investBlocks .text {
+      padding: 0 20px;
+    }
+
+    section.tokenomics .image .desktop {
+      display: none;
+    }
+    section.tokenomics .image .mobile {
+      display: block;
+    }
+    
+    section.tokenomics .toke-list .list-item { 
+      width: 100%;
+    }
+    section.goldIndustry h2 {
+      font-size: 36px;
+    }
+  }
+  @media only screen and (max-width: 480px) {
+    .slick-dots {
+      left: 23.5%;
+    }
+    section.banner .bannerslider .bannerText h3 {
+      margin-top: 20px;
+      font-size: 30px;
+      line-height: 40px;
+    }
+    section.mission h2,
+    section.problems h2 {
+      font-size: 28px;
+    }
+    .unit-list .item,
+    .number-list .item {
+      width: 80px;
+    }
+    section.banner {
+      padding-top: 35%;
+    }
+    section.team h2 {
+      font-size: 34px;
+    }
+    section.footer ul.footermenu li {
+      margin-left: 15px;
+    }
+  }
+  @media only screen and (max-width: 400px) {
+    .unit-list .item,
+    .number-list .item {
+      width: 60px;
+    }
+    section.banner .bannerslider .bannerText .tokenPrice {
+      font-size: 15px;
+    }
+  }

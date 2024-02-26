@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="130" height="53" viewBox="0 0 130 53">
+  <g id="Login_Button" data-name="Login Button" transform="translate(-1431 -78)">
+    <g id="Rectangle_7" data-name="Rectangle 7" transform="translate(1431 78)" fill="none" stroke="#373b43" stroke-width="2">
+      <rect width="130" height="53" rx="4" stroke="none"/>
+      <rect x="1" y="1" width="128" height="51" rx="3" fill="none"/>
+    </g>
+    <g id="Group_82" data-name="Group 82" transform="translate(87.75 -3)">
+      <text id="Log_in" data-name="Log in" transform="translate(1362.25 115)" fill="#fff" font-size="20" font-family="NHaasGroteskTXPro-65Md, Neue Haas Grotesk Text Pro" font-weight="500"><tspan x="0" y="0">LOG IN</tspan></text>
+      <path id="Union_1" data-name="Union 1" d="M9.643,8.5,0,0,9.643,8.5,10,8.185,9.643,8.5,10,8.815,9.643,8.5,0,17Z" transform="translate(1443.75 99.5)" fill="none" stroke="#fff" stroke-width="4"/>
+    </g>
+  </g>
+</svg>

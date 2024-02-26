@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1920" height="1479.281" viewBox="0 0 1920 1479.281">
+  <defs>
+    <linearGradient id="linear-gradient" x1="1" x2="0" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#0b0f17"/>
+      <stop offset="1" stop-color="#201e40"/>
+    </linearGradient>
+  </defs>
+  <g id="Road-Map_BG" data-name="Road-Map BG" transform="translate(0 -12331.496)">
+    <rect id="Rectangle_66" data-name="Rectangle 66" width="1920" height="1479.281" transform="translate(0 12331.496)" fill="url(#linear-gradient)"/>
+  </g>
+</svg>
